@@ -24,7 +24,7 @@ const getGameParams = async (req,res) => {
                 id: allGamesParams.data.id,
                 name: allGamesParams.data.name,
                 description: allGamesParams.data.description,
-                platforms: allGamesParams.data.platforms.map(p=>p.name),
+                platforms: allGamesParams.data.platforms.map(p=>p.platform.name),
                 background_image: allGamesParams.data.background_image,
                 genres: allGamesParams.data.genres.map(g=>g.name),
                 rating: allGamesParams.data.rating,

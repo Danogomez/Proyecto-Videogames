@@ -14,18 +14,18 @@ const gamePost = async (req,res) => {
         ) {
             res.status(404).json({message: 'Debe ingresar todos los campos'})
         }  else {
-            const [newGameForm, created] = await Videogame.findOrCreate({
+            const [newGameForm, created,] = await Videogame.findOrCreate({
                 where:{name:name},
                 defaults:{name,
                     description,
                     platforms,
-                    background_image: background_image ,
+                    background_image,
                     released,
                     rating,
                 } 
                 },
                 ); 
-                
+                // console.log(newGameForm);
                 genre.forEach(async element => {
                     let genresDbFound = await Genres.findAll({where: {name: element}})
                     

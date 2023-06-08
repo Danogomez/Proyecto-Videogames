@@ -24,7 +24,6 @@ module.exports = (sequelize) => {
     background_image: {
       type: DataTypes.STRING,
       allowNull: false,
-
     },
     released:{
       type: DataTypes.DATEONLY,
@@ -38,8 +37,7 @@ module.exports = (sequelize) => {
     created : {
       type: DataTypes.BOOLEAN,   // este create es para poder filtrar luego en el front.. al momento de mostrar los de la api o los del back o ambos...  
       defaultValue: true,
-    }
-
+    },
   },
   { timestamps: false }
   );
