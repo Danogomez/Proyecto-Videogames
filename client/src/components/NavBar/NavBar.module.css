@@ -1,0 +1,14 @@
+.mainContainer { 
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    color:rgb(162, 212, 212);
+    font-family: cursive;
+    padding: 15px;
+    width: auto;
+    margin: auto;
+    background: #abacad;
+    font-size: 16px;
+}

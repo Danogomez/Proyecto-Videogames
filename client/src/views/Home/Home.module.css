@@ -1,0 +1,64 @@
+.mensaje{
+  color: white;
+}
+
+.homeContainer {
+  max-width: 1200px; /* ajusta el valor según sea necesario */
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.landing {
+  /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* height: 100vh; */
+    background-image: url('https://img.freepik.com/foto-gratis/equipo-videojuegos-futurista-iluminado-ia-generativa-discoteca_188544-32105.jpg?w=740&t=st=1686659192~exp=1686659792~hmac=05810c11b506e17cb5ade918cc1c2bed87a142c2ba5f7d4fad02922c6c9bd808');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%; 
+}  
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5px;
+  background-image: url("../assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.main img {
+  width: 250px;
+  height: 250px;
+}
+
+.paginado {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.unButton {
+  background-color: #0072c6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.unButton:hover {
+  background-color: #005ea8;
+}
+

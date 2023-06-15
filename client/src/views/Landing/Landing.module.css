@@ -1,0 +1,19 @@
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/foto-gratis/equipo-videojuegos-futurista-iluminado-ia-generativa-discoteca_188544-32105.jpg?w=740&t=st=1686659192~exp=1686659792~hmac=05810c11b506e17cb5ade918cc1c2bed87a142c2ba5f7d4fad02922c6c9bd808');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%; 
+}
+
+
+
+ 

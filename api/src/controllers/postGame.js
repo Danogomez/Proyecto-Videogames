@@ -14,7 +14,7 @@ const gamePost = async (req,res) => {
         ) {
             res.status(404).json({message: 'Debe ingresar todos los campos'})
         }  else {
-            const [newGameForm, created,] = await Videogame.findOrCreate({
+            const [newGameForm, created] = await Videogame.findOrCreate({
                 where:{name:name},
                 defaults:{name,
                     description,
@@ -31,7 +31,7 @@ const gamePost = async (req,res) => {
                     
                     await newGameForm.addGenres(genresDbFound);
                 });
-                
+                // console.log(newGameForm);
                 if(created) {
                     res.status(200).json({message: 'VIDEOGAME CREATED SUCCESSFULLY'});
                 } else {

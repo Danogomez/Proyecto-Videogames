@@ -1,0 +1,35 @@
+.maincontainer {
+    margin: auto; /* Cambiar center por auto */
+    border: 1px solid rgb(0, 0, 0);
+    width: 200;
+    height: 400px;
+    border-radius: 10px;
+    background-color: rgb(60, 57, 66);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    overflow: hidden; /* Agregar overflow */
+  }
+
+  .cardLink {
+    text-decoration: none; /* Eliminar el subrayado */
+    color: inherit; /* Heredar el color del elemento padre */
+  }
+
+  .textos {
+    width: 200px; /* Reducir el ancho para dejar espacio para el margen */
+    height: 100px;
+    font-size: 10px; /* Reducir el tamaño de fuente */
+    /* margin: 10px; */
+    padding: 10px;
+    margin-bottom: 15px;
+    overflow: visible; /* Agregar overflow */
+  }
+
+  .imagen {
+    width: 100px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+
+
+

@@ -1,0 +1,40 @@
+
+.padre{   
+        display: flex;
+        justify-content: center;
+        /* background-image: url('https://wallpapercave.com/wp/wp2264358.jpg'); */
+        background-size: cover;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+} 
+.imagen{
+    margin-top: 20px;
+    width: 20%;
+    height: 20%;
+}
+
+.card{
+    text-align: center;
+    background-color: #5e670eed;
+    width: 700px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1rem;
+    box-shadow: 10px 10px 5px 0px rgba(9, 6, 6, 0.75);
+    text-shadow: 8px 8px 4px black, 0 0 22px grey ;
+    color:rgb(255, 255, 255);
+    
+}
+
+.person {
+    display:contents;
+    display: center;
+    font-family: Arial, sans-serif;
+    margin: center;
+    padding: center;
+  }

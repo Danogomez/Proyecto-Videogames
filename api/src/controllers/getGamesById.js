@@ -14,10 +14,10 @@ const getGameParams = async (req,res) => {
             const gameDbParams = fromDB.filter(game => game.id === idVideogame)
             res.status(200).json(gameDbParams)
         } else {            
-            let URL_BASE =`https://api.rawg.io/api/games/${idVideogame}?key=${API_KEY}`
+            let URL_BASE =`https://api.rawg.io/api/games/${idVideogame}?key=d53a115df3bf4bbdb04cb002cc630585`
             
             const allGamesParams = await axios.get(URL_BASE);
-            // console.log(allGamesParams.data);
+            console.log(allGamesParams.data);
             // console.log(idVideogame);
             
             const oneGame = {
