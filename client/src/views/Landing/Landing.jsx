@@ -7,16 +7,11 @@ const Landing = ()=> {
 
     return(
       <div className={style.landing}>
-
-      <div className={style.containerButton}>
              
       <Link to="/home">            
-            <button>START GAME</button>
+            <button className={style.button}>START GAME</button>
       </Link>
-      
-      </div>
-     
-      
+
       </div>)
 };
 

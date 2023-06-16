@@ -49,14 +49,13 @@ const Home = ()=> {
         }
       }; 
     return (
-        
-        <div className={style.landing}>
-        <div className={style.padre} >
-
-            <div className={style.container}>
+              <div className={style.landing}>
+      
+            {/* <div className={style.navContainer}> */}
             <NavBar ></NavBar>
-            </div>
-        <div className={style.container}>
+            {/* </div> */}
+            
+        <div className={style.paginado}>
           <button className={style.unButton} onClick={prev}>PREV</button>
           {pageNumbers.map(number => (
             <button className={style.unButton} key={number} onClick={() => handlePageChange(number)}>
@@ -66,26 +65,29 @@ const Home = ()=> {
           <button className={style.unButton} onClick={next}>NEXT</button>
         </div>
         <div className={style.main}>
-        {loading ? 
-        <img src="https://media1.giphy.com/media/l4FGjq205dsq8mcw0/200.webp?cid=ecf05e47o7xmbjf5pejt7od9k3eo506d8zr4ycrawnvb88ya&ep=v1_gifs_search&rid=200.webp&ct=g" alt="Cargando..."/>
+        {loading ? (
+          <div>
+            <h1>im loading</h1>
+         <img src="https://media1.giphy.com/media/l4FGjq205dsq8mcw0/200.webp?cid=ecf05e47o7xmbjf5pejt7od9k3eo506d8zr4ycrawnvb88ya&ep=v1_gifs_search&rid=200.webp&ct=g" alt="Cargando..."/>
+          </div>
+        )
         : (
-            <div className={style.homeContainer}>
+            <div className={style.cardsContainer}>
                 <CardsContainer games={currentGames}/>
             </div>
             )
         }
         </div>
-        <div className={style.container} >
-          <button className={style.unButton} onClick={prev}>PREV</button>
+        <div className={style.paginado} >
+          <button className={style.unButtonAbajo} onClick={prev}>PREV</button>
           {pageNumbers.map(number => (
-            <button className={style.unButton} key={number} onClick={() => handlePageChange(number)}>
+            <button className={style.unButtonAbajo} key={number} onClick={() => handlePageChange(number)}>
               {number}
             </button>
           ))}
-          <button className={style.unButton} onClick={next}>NEXT</button>
+          <button className={style.unButtonAbajo} onClick={next}>NEXT</button>
         </div>
-        </div>
-        </div> 
+        </div>  
         
     )
 };

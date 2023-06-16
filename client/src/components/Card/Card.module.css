@@ -4,9 +4,22 @@
     width: 200;
     height: 400px;
     border-radius: 10px;
-    background-color: rgb(60, 57, 66);
+    background-color: rgb(53, 52, 53);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     overflow: hidden; /* Agregar overflow */
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    transform: rotateY(0deg);
+  }
+
+  
+  .maincontainer:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    /* transform: rotateY(180deg); */
   }
 
   .cardLink {
@@ -15,17 +28,25 @@
   }
 
   .textos {
+
     width: 200px; /* Reducir el ancho para dejar espacio para el margen */
     height: 100px;
+    display: grid;
+    font-family: 'Courier New', cursive;
+    color: white;
     font-size: 10px; /* Reducir el tamaño de fuente */
-    /* margin: 10px; */
-    padding: 10px;
-    margin-bottom: 15px;
-    overflow: visible; /* Agregar overflow */
+    /* padding: 10px; */
+    /* margin-bottom: 15px; */
+    overflow: visible; 
+    margin-left: 15px;
+    align-items: center;
+    justify-content: center;
   }
 
+
   .imagen {
-    width: 100px;
+    border-radius: 10px !important;
+    width: 250px;
     height: 200px;
     object-fit: cover;
   }

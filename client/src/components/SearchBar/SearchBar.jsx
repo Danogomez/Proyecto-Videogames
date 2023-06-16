@@ -18,9 +18,9 @@ const SearchBar = () => {
 
     const dispatchName = (e) => {
         e.preventDefault()
-    dispatch(searchBar(name))
+    dispatch(searchBar(name));
         setName("");   
-        // setCurrentPage(1)  
+        
     };
 
     const showAll = e => {
@@ -28,16 +28,16 @@ const SearchBar = () => {
     }
 
     return (
-        <div>
+        <div >
             <form >
-                <input 
+                <input className={style.input} 
                 type="text" 
                 placeholder="Find by name"
                 onChange={handleSearch}
                 value ={name}
                 />
-                <button onClick={(e)=> dispatchName(e)}>SEARCH</button>
-                <button onClick={e=>showAll(e)}>RESET FILTERS</button>
+                <button className={style.button} onClick={(e)=> dispatchName(e)}>SEARCH</button>
+                <button className={style.button} onClick={e=>showAll(e)}>RESET FILTERS</button>
             </form>
 
         </div>

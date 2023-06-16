@@ -75,7 +75,7 @@ const rootReducer = (state= initialState, action) => {
                 const orderGames = [...state.videoGames].sort((a, b) => (a.rating > b.rating) ? 1 : -1);
             return {
                 ...state,
-                videoGames: action.payload === "1-9" ? orderGames : orderGames.reverse()
+                videoGames: action.payload === "Ascendente" ? orderGames : orderGames.reverse()
             }
 
             

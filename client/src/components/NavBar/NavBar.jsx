@@ -12,11 +12,11 @@ const NavBar = () => {
 
     const handleFilterOrigin = (event)=> {
             dispatch(filterOrigin(event.target.value))
-            setCurrentPage(1)
+            
     };
     const handleFilterGenre = (event)=> {
             dispatch(filterGenres(event.target.value))
-            setCurrentPage(1)
+            
         };
 
     const handleOrderGames = (event)=> {
@@ -27,25 +27,26 @@ const NavBar = () => {
     }
 
     return (
-        <nav className={style.mainContainer}>
+        <nav className={`${style.mainContainer}`}>
             <div >
                 <Link to='/create'>
-                <button onClick={()=> {}}>CREATE GAME</button>
+                <button className={style.button} onClick={()=> {}}>CREATE GAME</button>
                 </Link>
                 <Link to='/about'>
-                <button onClick={()=> {}}>ABOUT</button>
+                <button className={style.button}  onClick={()=> {}}>ABOUT</button>
                 </Link>
                 <Link to='/home'>
-                <button onClick={()=> {}}>HOME</button>
+                <button className={style.button}  onClick={()=> {}}>HOME</button>
                 </Link>
                 <Link to='/'>
-                <button onClick={()=> {}}>LOG OUT</button>
+                <button className={style.button}  onClick={()=> {}}>LOG OUT</button>
                 </Link>
             </div>
-                <SearchBar />
-            <div>
+            <SearchBar  />
+        
+            <div className={style.filterContainer}>
                 <div>
-                <select 
+                <select className={style.select}
                     onChange={(e) => {
                         handleFilterOrigin(e)}}
                     defaultValue="0"
@@ -59,7 +60,7 @@ const NavBar = () => {
                         </select>
                 </div>
                 <div>
-                    <select 
+                    <select  className={style.select}
                     onChange={handleFilterGenre}
                     defaultValue="0"
                     >
@@ -73,8 +74,8 @@ const NavBar = () => {
                             })}
                         </select>
                 </div>
-                <div>
-                <select 
+                <div >
+                <select className={style.select}
                     onChange={handleOrderGames}
                     defaultValue="0"
                     >
@@ -87,15 +88,15 @@ const NavBar = () => {
                         </select>
                 </div>
                 <div>
-                <select 
+                <select className={style.select} 
                     onChange={handleOrderRating}
                     defaultValue="0"
                     >
                         <option disabled value="0">
                             ORDER BY RATING
                         </option>
-                        <option value="1-9">1-9</option>
-                        <option value="9-1">9-1</option>
+                        <option value="1-9">Ascendente</option>
+                        <option value="9-1">Descendente</option>
                         
                         </select>
                 </div>

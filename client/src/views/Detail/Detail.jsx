@@ -21,28 +21,24 @@ const Detail = ()=> {
     return (
         <div className={style.padre} >
 
-        <div 
-      
-        className={style.card}
-        >
-          
-          
+        <div className={style.card}>
           <div >
             {detail.name ? (
               <>
-                <div>
+                <div className={style.buttonEffect}>
                   <Link to="/home">
-                    <a  className={style.a} href="#"><span >BACK HOME</span><i></i></a>
+                    {/* <a  className={style.a} href="#"><span >BACK HOME</span><i></i></a> */}
+                    <button>BACK HOME</button>
                   </Link>
 
                 </div>
+                
                 <img
                   className={style.imagen}
                   src={detail.background_image}
                 //   alt="img"
                   />
-                
-                <h2 > {detail.name}</h2>
+                <h1 className={style.h1} > {detail.name}</h1>
                 <p>ID:{detail.id}</p>
                 <p>PLATFORMS: {detail.platforms && detail.platforms.join(",  ")}</p>
                 <p>GENRES: {detail.genres.join(",  ")}</p>

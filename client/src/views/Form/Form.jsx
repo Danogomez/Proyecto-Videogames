@@ -141,13 +141,18 @@ const Form = ()=> {
 
 
     return (
-    <div>
+    <div className={style.padre}>
+        
+        <div className={style.card}>
+
+        <form onSubmit={handleSubmit}  >
+
         <Link to="/home">
-            <a  className={style.a} href="#"><span >BACK HOME</span><i></i></a>
+            <button className={style.buttonEffect}>BACK HOME</button>
           </Link>
+            {/* <a  className={style.a} href="#"><span >BACK HOME</span><i></i></a> */}
         {validate && <div>{validate}</div>}
-        <form onSubmit={handleSubmit}  className={style.container}>
-            <div>
+            <div className={style.todoinput}>
                 {/* <label>Name: </label> */}
                 <input 
                 type="text" 
@@ -157,7 +162,7 @@ const Form = ()=> {
                 onChange={(e)=> handleChange(e)}
             />
             </div>
-            <div>
+            <div className={style.todoinput}>
                 <label>RELEASED DATE: </label>
                 <input 
                 type="date" 
@@ -167,7 +172,7 @@ const Form = ()=> {
             />
             </div>
 
-            <div>
+            <div className={style.todoinput}>
                 <textarea
                 value={dataGame.description}
                 // className={style.input}
@@ -181,7 +186,7 @@ const Form = ()=> {
                 ></textarea>
             </div>
             
-            <div>
+            <div className={style.todoinput}>
                 <select
                     onChange={handleCheckPlatforms}
                     // className={style.option}
@@ -199,7 +204,7 @@ const Form = ()=> {
                     );
                     })}
                 </select>
-                <div>
+                <div className={style.todoinput}>
                     {dataGame.platforms.map((e, index) => {
                     return (
                         <button
@@ -215,7 +220,7 @@ const Form = ()=> {
                 </div>
             </div>
 
-            <div>
+            <div className={style.todoinput}>
                 <label for="rating">RATING: </label>
                 <input 
                 type="range"
@@ -231,7 +236,7 @@ const Form = ()=> {
                 </output>
             </div>
             
-            <div>
+            <div className={style.todoinput}>
                 <input
                 value={dataGame.background_image}
                 type="text"
@@ -240,7 +245,7 @@ const Form = ()=> {
                 onChange={(e) => handleChange(e)}
                 />
             </div>
-            <div>
+            <div className={style.todoinput}>
                 <select
                 name="genre"
                 value={valueSelect}
@@ -258,7 +263,7 @@ const Form = ()=> {
                     })}
                 </select>
 
-            <div>
+            <div >
                 {dataGame.genre.map((e, index) => {
                 return (
                     <button
@@ -273,9 +278,15 @@ const Form = ()=> {
                 })}
             </div>
             </div>
-            <button type="submit" >CREATE</button>
+            <button type="submit"
+            className={style.buttonEffectcreate} >CREATE</button>
         </form>
-    </div>  
+    </div> 
+    </div>
+
+
+     
+
     );
 };
 
