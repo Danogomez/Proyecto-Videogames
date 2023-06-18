@@ -14,7 +14,7 @@ import axios from 'axios';
 
 export const getAllGames = ()=> {
     return async function (dispatch) {
-        const URL_BASE = 'http://localhost:3001/videogames'
+        const URL_BASE = '/videogames'
         const peticion = await axios.get(URL_BASE)
         
        return dispatch({type: GET_VIDEO_GAMES,  payload: peticion.data})
@@ -24,7 +24,7 @@ export const getAllGames = ()=> {
 
 export const getGenres = ()=> {
     return async function (dispatch) {
-        const URL_BASE = 'http://localhost:3001/genres';
+        const URL_BASE = '/genres';
         const genresData = await axios.get(URL_BASE);
         const genres = genresData.data.map(e=>e.name)
 
@@ -35,7 +35,7 @@ export const getGenres = ()=> {
 export const searchBar = (name) => {
     return async function (dispatch) {
     const nameGame = await axios.get(
-        `http://localhost:3001/videogames?name=${name}`
+        `/videogames?name=${name}`
     );
     
     dispatch({type: SEARCH_BAR, payload: nameGame.data})
@@ -45,7 +45,7 @@ export const searchBar = (name) => {
 
 export const goHome = () => {
     return async function (dispatch) {
-        const URL_BASE = 'http://localhost:3001/videogames'
+        const URL_BASE = '/videogames'
         const peticion = await axios.get(URL_BASE)
         
        return dispatch({type: GO_HOME,  payload: peticion.data})
@@ -56,7 +56,7 @@ export const goHome = () => {
 export const getGameId =  (id) => {
     return async function (dispatch) {
         try {
-            const getId = await axios.get(`http://localhost:3001/videogames/${id}`);
+            const getId = await axios.get(`/videogames/${id}`);
             
             dispatch({type:GET_VIDEO_DETAIL, payload: getId.data})
             

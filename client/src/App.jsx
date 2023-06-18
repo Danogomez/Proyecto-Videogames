@@ -3,7 +3,8 @@ import './App.css'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import {About, Detail, Form, Home, Landing} from '../src/views'
 import NavBar from './components/NavBar/NavBar'
-
+import axios from 'axios'
+axios.defaults.baseURL='http://localhost:3001/'
 
 function App() {
     const location = useLocation()
